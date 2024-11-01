@@ -244,7 +244,7 @@ if __name__ == '__main__':
 
     num_classes = 15
     num_channels = 15 #number of features
-    num_epochs = 15
+    num_epochs = 200
     num_workers = 0
     train_batch_size = 2
     val_batch_size = 2
