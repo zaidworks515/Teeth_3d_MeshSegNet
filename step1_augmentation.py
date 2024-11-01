@@ -52,7 +52,7 @@ if __name__ == "__main__":
 
     sample_list = list(range(1, num_samples+1))
     # num_augmentations = 20
-    num_augmentations = 5
+    num_augmentations = 20
 
     for i_sample in sample_list:
         for i_aug in range(num_augmentations):

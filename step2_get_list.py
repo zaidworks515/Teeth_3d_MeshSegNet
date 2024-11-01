@@ -8,8 +8,7 @@ if __name__ == '__main__':
 
     data_path = './augmentation_vtk_data/'
     output_path = './'
-    # num_augmentations = 20
-    num_augmentations = 5
+    num_augmentations = 20
     train_size = 0.8
     with_flip = False
 
