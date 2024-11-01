@@ -8,9 +8,10 @@ if __name__ == '__main__':
 
     data_path = './augmentation_vtk_data/'
     output_path = './'
-    num_augmentations = 20
+    # num_augmentations = 20
+    num_augmentations = 5
     train_size = 0.8
-    with_flip = True
+    with_flip = False
 
     num_samples = 3 # define number of samples
     sample_list = list(range(1, num_samples+1))
