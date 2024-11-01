@@ -247,7 +247,7 @@ if __name__ == '__main__':
     num_workers = 0
     train_batch_size = 2
     val_batch_size = 2
-    num_batches_to_print = 20
+    num_batches_to_print = 5
 
     if use_visdom:
         # set plotter
