@@ -12,7 +12,7 @@ if __name__ == '__main__':
     train_size = 0.8
     with_flip = True
 
-    num_samples = 3 # define number of samples
+    num_samples = 7 # define number of samples
     sample_list = list(range(1, num_samples+1))
     sample_name = 'A{0}_Sample_0{1}_d.vtp'
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     #print(sample_list)
 
     i_cv = 0
-    kf = KFold(n_splits=3, shuffle=False)
+    kf = KFold(n_splits=6, shuffle=False)
     for train_idx, test_idx in kf.split(sample_list):
 
         i_cv += 1
