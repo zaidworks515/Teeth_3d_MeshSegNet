@@ -97,8 +97,8 @@ if __name__ == '__main__':
 
             A_S = batched_sample['A_S'].to(device, dtype=torch.float)
             A_L = batched_sample['A_L'].to(device, dtype=torch.float)
-            print(f'Inputs shape: {inputs.shape}, A_S shape: {A_S.shape}, A_L shape: {A_L.shape}')
-            print(f'Inputs dtype: {inputs.dtype}, A_S dtype: {A_S.dtype}, A_L dtype: {A_L.dtype}')
+            # print(f'Inputs shape: {inputs.shape}, A_S shape: {A_S.shape}, A_L shape: {A_L.shape}')
+            # print(f'Inputs dtype: {inputs.dtype}, A_S dtype: {A_S.dtype}, A_L dtype: {A_L.dtype}')
 
             one_hot_labels = nn.functional.one_hot(labels[:, 0, :], num_classes=num_classes)
 
@@ -166,8 +166,8 @@ if __name__ == '__main__':
                 # labels = labels - 2 
                 A_S = batched_val_sample['A_S'].to(device, dtype=torch.float)
                 A_L = batched_val_sample['A_L'].to(device, dtype=torch.float)
-                print(f'Inputs shape: {inputs.shape}, A_S shape: {A_S.shape}, A_L shape: {A_L.shape}')
-                print(f'Inputs dtype: {inputs.dtype}, A_S dtype: {A_S.dtype}, A_L dtype: {A_L.dtype}')
+                # print(f'Inputs shape: {inputs.shape}, A_S shape: {A_S.shape}, A_L shape: {A_L.shape}')
+                # print(f'Inputs dtype: {inputs.dtype}, A_S dtype: {A_S.dtype}, A_L dtype: {A_L.dtype}')
 
                 one_hot_labels = nn.functional.one_hot(labels[:, 0, :], num_classes=num_classes)
 
