@@ -132,7 +132,7 @@ def GetVTKTransformationMatrix(rotate_X=[-35, 35], rotate_Y=[-35, 35], rotate_Z=
 if __name__ == "__main__":
 
     num_samples = 11  # Number of samples to process
-    vtk_path = './src trial'  # Path to source VTK files
+    vtk_path = './src'  # Path to source VTK files
     output_save_path = './augmentation_vtk_data'  # Path to save augmented VTK files
 
     if not os.path.exists(output_save_path):
