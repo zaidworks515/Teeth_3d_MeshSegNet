@@ -12,7 +12,7 @@ if __name__ == '__main__':
     train_size = 0.8
     with_flip = True
 
-    num_samples = 7 # define number of samples
+    num_samples = 11 # define number of samples
     sample_list = list(range(1, num_samples+1))
     sample_name = 'A{0}_Sample_0{1}_d.vtp'
 

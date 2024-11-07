@@ -131,7 +131,7 @@ def GetVTKTransformationMatrix(rotate_X=[-35, 35], rotate_Y=[-35, 35], rotate_Z=
 
 if __name__ == "__main__":
 
-    num_samples = 1  # Number of samples to process
+    num_samples = 11  # Number of samples to process
     vtk_path = './src trial'  # Path to source VTK files
     output_save_path = './augmentation_vtk_data'  # Path to save augmented VTK files
 
@@ -154,7 +154,7 @@ if __name__ == "__main__":
             )
             # Load, apply transformation, and save the mesh
             mesh = load(os.path.join(vtk_path, file_name))
-            mesh.apply_transform(vtk_matrix)
+            mesh.applyTransform(vtk_matrix)
             mesh.write(os.path.join(output_save_path, output_file_name))
 
         # Process flipped mesh (same logic applied)
@@ -170,5 +170,5 @@ if __name__ == "__main__":
             )
             # Load, apply transformation, and save the mesh
             mesh = load(os.path.join(vtk_path, file_name))
-            mesh.apply_transform(vtk_matrix)
+            mesh.applyTransform(vtk_matrix)
             mesh.write(os.path.join(output_save_path, output_file_name))
