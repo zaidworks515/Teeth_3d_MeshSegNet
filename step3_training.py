@@ -24,7 +24,7 @@ if __name__ == '__main__':
     model_name = 'Teeth Segmentation (Trial)'
     checkpoint_name = 'latest_checkpoint.tar'
 
-    num_classes = 17
+    num_classes = 18
     num_channels = 15 #number of features
     num_epochs = 200
     num_workers = 0
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     torch.backends.cudnn.enabled = True
 
     print('Training model...')
-    class_weights = torch.ones(17).to(device, dtype=torch.float)
+    class_weights = torch.ones(num_classes).to(device, dtype=torch.float)
     for epoch in range(num_epochs):
 
         # training
@@ -93,8 +93,8 @@ if __name__ == '__main__':
             # send mini-batch to device
             inputs = batched_sample['cells'].to(device, dtype=torch.float)
             labels = batched_sample['labels'].to(device, dtype=torch.long)
-            print(labels)
-            # labels = labels - 2 
+            print(f"UNIQUE LABELS:::: {np.unique(labels.cpu().numpy())}")
+
 
             A_S = batched_sample['A_S'].to(device, dtype=torch.float)
             A_L = batched_sample['A_L'].to(device, dtype=torch.float)
@@ -165,8 +165,8 @@ if __name__ == '__main__':
                 inputs = batched_val_sample['cells'].to(device, dtype=torch.float)
                 labels = batched_val_sample['labels'].to(device, dtype=torch.long)
                 # labels = labels - 2 
-                
-                print(labels)
+                # print(f"length of labels: {len(labels)}")
+                print(f"UNIQUE LABELS:::: {np.unique(labels.cpu().numpy())}")
                 
                 A_S = batched_val_sample['A_S'].to(device, dtype=torch.float)
                 A_L = batched_val_sample['A_L'].to(device, dtype=torch.float)
